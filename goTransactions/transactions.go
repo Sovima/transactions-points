@@ -22,7 +22,7 @@ type Transactions struct {
 
 	totalValues map[string] int
 
-	rewards []Rules
+	rewards []rules.Rule
 
 }
 
@@ -41,19 +41,22 @@ func (t *Transactions) Populate() {
 	fmt.Printf("total SportCheck: %v\n", t.totalValues["sportcheck"])
 }
 
+
 func (t *Transactions) GetRules() {
-	t.rewards = []
-
+	t.rewards = rules.CollectRewards(t.totalValues)
 	// At this point we must decide which rules to apply
-	
-	
-
-
+	fmt.Println("Getting rewards" , t.rewards)
 }
 
-// func (t *Transactions) ApplyRules() {
+func (t *Transactions) ApplyRules() {
+	points := 0
+	for _, reward := range t.rewards {
+		fmt.Println(reward)
+		points += reward.ApplyRule()
+		fmt.Println("Getting points" , points)
+	}
 	
-// }
+}
 
 
 
@@ -105,6 +108,6 @@ func collectTransactions() map[string]Transaction {
 func main() {
 	monthlyTransactions := Transactions{}
 	monthlyTransactions.Populate() // Collect the transactions
-	// monthlyTransactions.GetRules() // Collect the rules
-	// monthlyTransactions.ApplyRules() // Apply collected rules
+	monthlyTransactions.GetRules() // Collect the rules
+	monthlyTransactions.ApplyRules() // Apply collected rules
 }
