@@ -1,5 +1,8 @@
 # Reward points
 
+
+The whole module can be found in `goTransactions`
+
 The rules are defined in the rules.py file
 
 
