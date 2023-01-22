@@ -8,6 +8,7 @@ In this case, the greedy approach is used where each rule is applied as many tim
 2. 2x Rule 4
 3. Rule 2
 4. Rule 4
+5. 3x Rule 6
 5. Rule 3
 6. Rule 6
 7. Rule 7
