@@ -1,19 +1,16 @@
 # Reward points
 
-##### Table of Contents  
-[Walkthrough](##Walkthrough)  
-[Project description](##Description)
-[Usage](##Usage)
-[Adding a new rule](##Adding)
-
-
-
 ## Walkthrough
 
 For the video walk through the functionalities of the website, go to [video walkthrough](https://youtu.be/S1-GgV5g3O8)
 
+- [Reward points](#reward-points)
+  * [Walkthrough](#walkthrough)
+  * [Project Description](#project-description)
+  * [Usage](#usage)
+  * [Adding a new rule](#adding-a-new-rule)
 
-## Description
+## Project Description
 
 This module implements a web server that runs on localhost, collects transactions, and allows to track reward points for all transactoins as well as individually. 
 
