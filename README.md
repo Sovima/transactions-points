@@ -34,6 +34,36 @@ Lastly, `SofyaMalashchenko.go` contains implementation of the server that runs o
 For further information on the specific files and functions, please view the comments in `rules.go`, `transactions.go`, and `SofyaMalashchenko.go`.
 
 ## Usage
+
+To run the server, run 
+```
+go run SofyaMalashchenko.go
+```
+from the root project folder (the folder where this `README.md` is located). 
+Then, in browser open `http://localhost:8080/`. This will take you to the starting point of the web app. 
+
+In the form, insert the list of transactions in json string format and press the submit button. For example:
+```
+{
+    "T01": {"date": "2021-05-01", "merchant_code" : "sportcheck", "amount_cents": 3500},
+    "T02": {"date": "2021-05-02", "merchant_code" : "sportcheck", "amount_cents": 8700},
+    "T03": {"date": "2021-05-03", "merchant_code" : "tim_hortons", "amount_cents": 323},
+    "T04": {"date": "2021-05-04", "merchant_code" : "tim_hortons", "amount_cents": 1267},
+    "T05": {"date": "2021-05-05", "merchant_code" : "tim_hortons", "amount_cents": 2116},
+    "T06": {"date": "2021-05-06", "merchant_code" : "tim_hortons", "amount_cents": 2211},
+    "T07": {"date": "2021-05-07", "merchant_code" : "subway", "amount_cents": 1853},
+    "T08": {"date": "2021-05-08", "merchant_code" : "subway", "amount_cents": 2153},
+    "T09": {"date": "2021-05-09", "merchant_code" : "sportcheck", "amount_cents": 7326},
+    "T10": {"date": "2021-05-10", "merchant_code" : "tim_hortons", "amount_cents": 1321}
+}
+```
+
+The output will be the total number of reward points collected from these transactions. Also, a new form will apear under the first form. After this, there are two options:
+1. In the newly appeared form, submit a transaction ID to view the number of reward points collected from that transaction. The value of reward points will appear under the form. Otherwise, no response will be produced. 
+2. In the original form, submit another list of transactions in the same format. 
+
+Repeat option 1 or option 2 to view more information about the current or new transactions. 
+
 ## Adding a new rule
 
 Current implementation of the rule structs allows for an easy addition of new rules. 
