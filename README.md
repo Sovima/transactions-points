@@ -1,21 +1,25 @@
 # Reward points
 
+## Project description
 
-The whole module can be found in `goTransactions`
+This module implements a web server that runs on localhost, collects transactions, and allows to track reward points for all transactoins as well as individually. 
 
-The rules are defined in the rules.py file
-
-
-In this case, the greedy approach is used where each rule is applied as many times as possible in the following order:
+The rules by which reward points are awarded are defined in the `transactions/rules/rules.go` file. In this case, the greedy approach is used. That is, each rule is applied as many times as possible with the following priorities:
 1. Rule 1
 2. 2x Rule 4
 3. Rule 2
+3. Rule4 + 2x Rule6
 4. 3x Rule 6
 5. Rule 4
 7. Rule 6
 8. Rule 7
 
-Note that rule 5 is not present as it is redundant compared to rule 6. 
+Note that rule 5 and rule3 are not present as more points can be earned by fully substituting them with other available rules. 
+
+The rules package is used in `transactions/transactions.go` which implements the pipeline for collecting transactions, collecting rules, and applying the rules to collect reward points.
+
+Lastly, `SofyaMalashchenko.go`
+
 
 ## Walkthrough
 
