@@ -1,14 +1,15 @@
 # Reward points
 
-## Walkthrough
-
-For the video walk through the functionalities of the website, go to [video walkthrough](https://youtu.be/S1-GgV5g3O8)
-
+## Table of contents
 - [Reward points](#reward-points)
   * [Walkthrough](#walkthrough)
   * [Project Description](#project-description)
   * [Usage](#usage)
   * [Adding a new rule](#adding-a-new-rule)
+
+## Walkthrough
+
+For the video walk through the functionalities of the website, go to [video walkthrough](https://youtu.be/S1-GgV5g3O8)
 
 ## Project Description
 
@@ -18,7 +19,7 @@ The rules by which reward points are awarded are defined in the `transactions/ru
 1. Rule 1
 2. 2x Rule 4
 3. Rule 2
-3. Rule4 + 2x Rule6
+3. Rule4 + 2x Rule6 (Rule8)
 4. 3x Rule 6
 5. Rule 4
 7. Rule 6
