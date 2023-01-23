@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My first webpage</title>
+</head>
+<body>
+    <form class="transactions-form" action="/" method="post">
+        <div class="transactions">
+            <input type="textarea" name="transactions" placeholder="monthly transactions" autocomplete="on" required><br>
+        </div>
+        <input type="submit">
+    </form>
+
+    {{if .Total_points}}
+        <div> <p> Total points is: {{.Total_points}} </p> </div>
+        <form class="transaction-num" action="/check-one" method="post">
+            <div class="transaction-num">
+                <p>To check individual transactions enter the transaction number</p>
+                <input type="text" name="transaction-num" placeholder="Transaction ID" autocomplete="on" required><br>
+            </div>
+            <input type="submit">
+        </form>
+    {{else}}
+    {{end}}
+
+
+    {{if .Individual_points}}
+        <div> <p> Individual points for this transaction: {{.Individual_points}} </p> </div>
+    {{else}}
+    {{end}}
+</body>
+</html>
