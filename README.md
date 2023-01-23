@@ -17,7 +17,9 @@ In this case, the greedy approach is used where each rule is applied as many tim
 
 Note that rule 5 is not present as it is redundant compared to rule 6. 
 
+## Walkthrough
 
+For the video walk through the functionalities of the website, go to [video walkthrough](https://youtu.be/S1-GgV5g3O8)
 
 ## Adding a new rule
 
